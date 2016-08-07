@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', path: "/Users/eileen/Sites/open_source/rails"
+#gem 'rails', path: "/Users/eileen/Sites/open_source/rails"
+gem 'rails', github: 'eileencodes/rails', branch: 'rails_system_tests'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
