@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CreateUserTest < Rails::SystemTestCase
+class User::CreateTest < Rails::SystemTestCase
   setup do
     visit users_path
     click_on 'New User'
