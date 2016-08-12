@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+To run the system tests:
 
-Things you may want to cover:
+```
+git clone git@github.com:eileencodes/system_testing_app.git
 
-* Ruby version
+bundle
 
-* System dependencies
+bin/rails db:migrate
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+bin/rails test:system
+```
