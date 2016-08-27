@@ -7,6 +7,6 @@ class User::IndexTest < Rails::SystemTestCase
 
   test 'users index with rails assertions' do
     assert_all_of_selectors 'td.name'
-    assert_none_of_selectors 'p'
+    assert_none_of_selectors 'ul'
   end
 end

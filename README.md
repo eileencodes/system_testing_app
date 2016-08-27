@@ -7,6 +7,8 @@ git clone git@github.com:eileencodes/system_testing_app.git
 
 bundle
 
+bin/rails db:create
+
 bin/rails db:migrate
 
 bin/rails test:system
