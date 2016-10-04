@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 
 #gem 'rails', path: "/Users/eileen/Sites/open_source/rails"
-gem 'rails', github: 'eileencodes/rails', branch: 'rails_system_tests'
+gem 'rails', git: 'https://github.com/eileencodes/rails.git', branch: 'rails_system_tests'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', github: "rails/sass-rails"
+gem 'sass-rails', git: "https://github.com/rails/sass-rails.git"
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -38,7 +38,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', github: 'rails/web-console'
+  gem 'web-console', git: 'https://github.com/rails/web-console.git'
   gem 'listen', '~> 3.0.5'
 end
 
