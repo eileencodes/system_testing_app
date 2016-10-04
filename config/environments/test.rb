@@ -37,7 +37,6 @@ Rails.application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-  config.system_testing.driver = :rails_selenium_driver
   #config.system_testing.driver = SystemTesting::DriverAdapters::CapybaraSeleniumDriver.new(
   #  browser: :chrome, server: :puma
   #)

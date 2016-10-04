@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/eileencodes/rails.git
-  revision: 0cec6d3d21c6993327198fe5f9efc148f717da64
+  revision: b534e82afc7d6111008c1178a68df384231cebbe
   branch: rails_system_tests
   specs:
     actioncable (5.1.0.alpha)
