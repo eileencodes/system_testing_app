@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'system_test_helper'
 
 class CompaniesTest < ActionSystemTestCase
   setup do
