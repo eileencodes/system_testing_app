@@ -1,4 +1,4 @@
-require 'test_helper'
+require 'system_test_helper'
 
 class User::IndexTest < ActionSystemTestCase
   setup do
@@ -7,6 +7,7 @@ class User::IndexTest < ActionSystemTestCase
 
   test 'users index with rails assertions' do
     assert_selector 'h1', text: 'Users'
+    assert_all_of_selectors 'p.test', text: [ 'A', 'B' ]
     #assert_all_of_selectors 'td.name'
     #assert_none_of_selectors 'ul'
   end

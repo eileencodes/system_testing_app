@@ -15,8 +15,8 @@ class User::CreateTest < ActionSystemTestCase
   end
 
   test 'create a user w/ rails form helpers' do
-    fill_in_all_fields 'Name' => 'Eileen'
-    click_checkbox_label 'Admin'
+    fill_in 'Name', with: 'Eileen'
+    #click_checkbox_label 'Admin'
 
     # only works on selenium right now
     #if Capybara.current_driver == :rack_test
