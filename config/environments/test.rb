@@ -37,13 +37,6 @@ Rails.application.configure do
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
-  #config.system_testing.driver = SystemTesting::DriverAdapters::CapybaraSeleniumDriver.new(
-  #  browser: :chrome, server: :puma
-  #)
-  #config.system_testing.driver = SystemTesting::DriverAdapters::CapybaraRackTestDriver.new(
-  #  useragent: 'Whatever'
-  #)
-
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
