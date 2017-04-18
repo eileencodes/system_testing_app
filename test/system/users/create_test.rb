@@ -1,12 +1,13 @@
 require 'system_test_helper'
 
-class User::CreateTest < ActionSystemTestCase
+class User::CreateTest < ApplicationSystemTestCase
   setup do
+    puts :SELENIUM => Capybara.current_driver
     visit users_path
     click_on 'New User'
   end
 
-  test 'create a user w/ capybara defaults' do
+  test 'create user' do
     fill_in 'Name', with: 'Arya'
 
     click_on 'Create User'

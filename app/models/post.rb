@@ -1,3 +1,3 @@
 class Post < ApplicationRecord
-  #validates_uniqueness_of :title
+  validates_uniqueness_of :title
 end

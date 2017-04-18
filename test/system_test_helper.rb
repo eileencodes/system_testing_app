@@ -1,8 +1,13 @@
 require 'test_helper'
+require "capybara/poltergeist"
 
-class ActionSystemTestCase < ActionSystemTest::Base
-  teardown do
-    take_failed_screenshot
-    Capybara.reset_sessions!
-  end
+# ok so the problem is that driven_by is called on boot instead
+# of on the instance of the test.
+
+class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
+  driven_by :selenium, using: :chrome
+end
+
+class SomeOtherApplicationTestCase < ActionDispatch::SystemTestCase
+  driven_by :poltergeist
 end

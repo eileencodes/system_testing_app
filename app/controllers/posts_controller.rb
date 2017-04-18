@@ -10,6 +10,15 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    respond_to do |format|
+      format.html do
+        render template: "posts/show"
+      end
+
+      format.any do
+        render template: "posts/show", formats: [:html]
+      end
+    end
   end
 
   # GET /posts/new

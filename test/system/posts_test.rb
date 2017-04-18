@@ -1,16 +1,16 @@
 require 'system_test_helper'
 
-class PostsTest < ActionSystemTestCase
+class PostsTest < ApplicationSystemTestCase
   setup do
     visit posts_path
     click_on 'New Post'
   end
 
   test 'create a post' do
-    fill_in 'Title', with: 'This is a new post'
+    fill_in 'Title', with: 'Whatever'
 
     click_on 'Create Post'
 
-    assert_text 'This is a new post'
+    assert_text 'Whatever'
   end
 end

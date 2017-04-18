@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class PostsControllerTest < ActionDispatch::IntegrationTest
+class PostsControllerTest < ActionController::TestCase
   setup do
-    @post = posts(:one)
+    @post = Post.create!(title: "hi")
   end
 
   test "should get index" do
@@ -15,6 +15,11 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "show format" do
+    get post_path(@post), params: { format: "" }
+    assert_response :success
+  end
+
   test "should create post" do
     assert_difference('Post.count') do
       post posts_url, params: { post: { title: @post.title } }
@@ -24,7 +29,8 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show post" do
-    get post_url(@post)
+    get :show, params: { id: @post }
+    puts @request.params["id"].encoding
     assert_response :success
   end
 

@@ -1,6 +1,6 @@
 require 'system_test_helper'
 
-class CompaniesTest < ActionSystemTestCase
+class CompaniesTest < ApplicationSystemTestCase
   setup do
     visit companies_path
   end
